@@ -14,5 +14,5 @@ class profile::wordpress {
     docroot => '/opt/wordpress',
   }
 
-  class { 'wordpress': }
+  include ::wordpress
 }
