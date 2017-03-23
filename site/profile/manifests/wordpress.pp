@@ -1,5 +1,5 @@
 class profile::wordpress {
-  class { 'myslq::server':
+  class { 'mysql::server':
     root_password => 'supersekrit',
   }
   class { 'mysql::bindings':
