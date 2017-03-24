@@ -69,6 +69,7 @@ node default {
   include wrappers::limits
   include role::classroom
   #include ::users
+  include users::fundamentals
   include skeleton
   include ::nginx
   if $::virtual != 'physical'{
