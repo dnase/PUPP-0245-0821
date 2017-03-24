@@ -57,6 +57,7 @@ node default {
     path => '/usr/bin:/usr/local/bin',  
     creates => '/etc/motd',
     }
+    }
     #Notify { "Hello, my name is ${::hostname}":}
     #File { '/etc/motd':
       #ensure => file,
