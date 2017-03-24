@@ -52,7 +52,7 @@ node default {
   #mode => '0644',
   #content => "Hi, there!\n",
   #  }
-    Noftify { "Hello, my name is ${::hostname}":}
+    Notify { "Hello, my name is ${::hostname}":}
     exec { "cowsay 'Welcome to ${::fqdn}!' > /etc/motd":  
     path => '/usr/bin:/usr/local/bin',  
     creates => '/etc/motd',
