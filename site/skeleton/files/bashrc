@@ -9,5 +9,5 @@ fi
 # export SYSTEMD_PAGER=
 
 # User specific aliases and functions
-echo "Hi! Hi! Hi!!!!!!"
+echo "Hi! skeleton module!!"
 cowsay 'Hi Yi!!!'
