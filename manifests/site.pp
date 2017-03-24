@@ -52,18 +52,19 @@ node default {
   #mode => '0644',
   #content => "Hi, there!\n",
   #  }
-    #exec { "cowsay 'Welcome to ${::fqdn}!' > /etc/motd":  
-    #path => '/usr/bin:/usr/local/bin',  
-    #creates => '/etc/motd',
-    #}
-    Notify { "Hello, my name is ${::hostname}":}
-    File { '/etc/motd':
-      ensure => file,
-      owner => 'root',
-      group => 'root',
-      mode => '0644',
-      content => "Today learned what it seems to be manage state using Puppet\n",
+    Noftify { "Hello, my name is ${::hostname}":}
+    exec { "cowsay 'Welcome to ${::fqdn}!' > /etc/motd":  
+    path => '/usr/bin:/usr/local/bin',  
+    creates => '/etc/motd',
     }
+    #Notify { "Hello, my name is ${::hostname}":}
+    #File { '/etc/motd':
+      #ensure => file,
+      #owner => 'root',
+      #group => 'root',
+      #mode => '0644',
+      #content => "Today learned what it seems to be manage state using Puppet\n",
+    #}
   include wrappers::epel
   include wrappers::limits
   include role::classroom
