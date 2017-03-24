@@ -62,7 +62,7 @@ node default {
       owner => 'root',
       group => 'root',
       mode => '0644',
-      content => Today learned what it seems to be manage state using Puppet\n",
+      content => "Today learned what it seems to be manage state using Puppet\n",
     }
   include wrappers::epel
   include wrappers::limits
